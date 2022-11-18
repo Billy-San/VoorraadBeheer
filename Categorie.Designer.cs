@@ -32,28 +32,26 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.inlog_btn = new System.Windows.Forms.Button();
+            this.categorieLijst = new System.Windows.Forms.DataGridView();
+            this.verwijderenbtn = new System.Windows.Forms.Button();
+            this.bewerkenbtn = new System.Windows.Forms.Button();
+            this.bewaren_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.OpmerkingTB = new System.Windows.Forms.TextBox();
             this.UserName = new System.Windows.Forms.Label();
             this.naamTB = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.categorieLijst)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button7
@@ -95,27 +93,6 @@
             this.button4.Text = "Producten";
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button3.Location = new System.Drawing.Point(782, 275);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(167, 34);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Zoeken";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(658, 277);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(107, 33);
-            this.comboBox2.TabIndex = 35;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -126,54 +103,59 @@
             this.label4.TabIndex = 34;
             this.label4.Text = "Lijst categorie";
             // 
-            // dataGridView1
+            // categorieLijst
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(325, 322);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 292);
-            this.dataGridView1.TabIndex = 33;
+            this.categorieLijst.BackgroundColor = System.Drawing.Color.White;
+            this.categorieLijst.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.categorieLijst.Location = new System.Drawing.Point(325, 322);
+            this.categorieLijst.Name = "categorieLijst";
+            this.categorieLijst.RowHeadersWidth = 62;
+            this.categorieLijst.RowTemplate.Height = 33;
+            this.categorieLijst.Size = new System.Drawing.Size(856, 292);
+            this.categorieLijst.TabIndex = 33;
+            this.categorieLijst.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.categorieLijst_CellContentClick);
             // 
-            // button2
+            // verwijderenbtn
             // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button2.Location = new System.Drawing.Point(816, 171);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 34);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Verwijderen";
-            this.button2.UseVisualStyleBackColor = false;
+            this.verwijderenbtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.verwijderenbtn.FlatAppearance.BorderSize = 0;
+            this.verwijderenbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.verwijderenbtn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.verwijderenbtn.Location = new System.Drawing.Point(816, 171);
+            this.verwijderenbtn.Name = "verwijderenbtn";
+            this.verwijderenbtn.Size = new System.Drawing.Size(167, 34);
+            this.verwijderenbtn.TabIndex = 32;
+            this.verwijderenbtn.Text = "Verwijderen";
+            this.verwijderenbtn.UseVisualStyleBackColor = false;
+            this.verwijderenbtn.Click += new System.EventHandler(this.verwijderenbtn_Click);
             // 
-            // button1
+            // bewerkenbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Location = new System.Drawing.Point(446, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 34);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Bewerken";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bewerkenbtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bewerkenbtn.FlatAppearance.BorderSize = 0;
+            this.bewerkenbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bewerkenbtn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bewerkenbtn.Location = new System.Drawing.Point(446, 171);
+            this.bewerkenbtn.Name = "bewerkenbtn";
+            this.bewerkenbtn.Size = new System.Drawing.Size(167, 34);
+            this.bewerkenbtn.TabIndex = 31;
+            this.bewerkenbtn.Text = "Bewerken";
+            this.bewerkenbtn.UseVisualStyleBackColor = false;
+            this.bewerkenbtn.Click += new System.EventHandler(this.bewerkenbtn_Click);
             // 
-            // inlog_btn
+            // bewaren_btn
             // 
-            this.inlog_btn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.inlog_btn.FlatAppearance.BorderSize = 0;
-            this.inlog_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inlog_btn.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.inlog_btn.Location = new System.Drawing.Point(633, 171);
-            this.inlog_btn.Name = "inlog_btn";
-            this.inlog_btn.Size = new System.Drawing.Size(167, 34);
-            this.inlog_btn.TabIndex = 30;
-            this.inlog_btn.Text = "Bewaren";
-            this.inlog_btn.UseVisualStyleBackColor = false;
+            this.bewaren_btn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bewaren_btn.FlatAppearance.BorderSize = 0;
+            this.bewaren_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bewaren_btn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.bewaren_btn.Location = new System.Drawing.Point(633, 171);
+            this.bewaren_btn.Name = "bewaren_btn";
+            this.bewaren_btn.Size = new System.Drawing.Size(167, 34);
+            this.bewaren_btn.TabIndex = 30;
+            this.bewaren_btn.Text = "Bewaren";
+            this.bewaren_btn.UseVisualStyleBackColor = false;
+            this.bewaren_btn.Click += new System.EventHandler(this.inlog_btn_Click);
             // 
             // label1
             // 
@@ -186,12 +168,12 @@
             this.label1.Text = "Opmerking";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox2
+            // OpmerkingTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(724, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(320, 31);
-            this.textBox2.TabIndex = 24;
+            this.OpmerkingTB.Location = new System.Drawing.Point(724, 109);
+            this.OpmerkingTB.Name = "OpmerkingTB";
+            this.OpmerkingTB.Size = new System.Drawing.Size(320, 31);
+            this.OpmerkingTB.TabIndex = 24;
             // 
             // UserName
             // 
@@ -259,16 +241,6 @@
             this.panel1.Size = new System.Drawing.Size(300, 642);
             this.panel1.TabIndex = 20;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::VoorraadBeheer.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 81);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 39;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -279,21 +251,29 @@
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::VoorraadBeheer.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(77, 81);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            // 
             // Categorie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1206, 642);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.inlog_btn);
+            this.Controls.Add(this.categorieLijst);
+            this.Controls.Add(this.verwijderenbtn);
+            this.Controls.Add(this.bewerkenbtn);
+            this.Controls.Add(this.bewaren_btn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.OpmerkingTB);
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.naamTB);
             this.Controls.Add(this.panel2);
@@ -302,12 +282,12 @@
             this.Name = "Categorie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categorie";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categorieLijst)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,15 +298,13 @@
         private Button button7;
         private Button button5;
         private Button button4;
-        private Button button3;
-        private ComboBox comboBox2;
         private Label label4;
-        private DataGridView dataGridView1;
-        private Button button2;
-        private Button button1;
-        private Button inlog_btn;
+        private DataGridView categorieLijst;
+        private Button verwijderenbtn;
+        private Button bewerkenbtn;
+        private Button bewaren_btn;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox OpmerkingTB;
         private Label UserName;
         private TextBox naamTB;
         private TextBox textBox1;
