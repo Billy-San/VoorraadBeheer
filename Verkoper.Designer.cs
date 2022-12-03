@@ -28,45 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button7 = new System.Windows.Forms.Button();
+            this.uitloggenbtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.inlog_btn = new System.Windows.Forms.Button();
+            this.VerkoperList = new System.Windows.Forms.DataGridView();
+            this.Verwijderen_Verkoper_btn = new System.Windows.Forms.Button();
+            this.Bewerken_Verkoper_btn = new System.Windows.Forms.Button();
+            this.Bewaren_Verkoper_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Pseudo_tb = new System.Windows.Forms.TextBox();
             this.UserName = new System.Windows.Forms.Label();
             this.naamTB = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.WachtWoordtb = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.VerkoperList)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button7
+            // uitloggenbtn
             // 
-            this.button7.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button7.Location = new System.Drawing.Point(67, 580);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(167, 34);
-            this.button7.TabIndex = 18;
-            this.button7.Text = "Logout";
-            this.button7.UseVisualStyleBackColor = false;
+            this.uitloggenbtn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.uitloggenbtn.FlatAppearance.BorderSize = 0;
+            this.uitloggenbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uitloggenbtn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.uitloggenbtn.Location = new System.Drawing.Point(67, 580);
+            this.uitloggenbtn.Name = "uitloggenbtn";
+            this.uitloggenbtn.Size = new System.Drawing.Size(167, 34);
+            this.uitloggenbtn.TabIndex = 18;
+            this.uitloggenbtn.Text = "Logout";
+            this.uitloggenbtn.UseVisualStyleBackColor = false;
+            this.uitloggenbtn.Click += new System.EventHandler(this.uitloggenbtn_Click);
             // 
             // button5
             // 
@@ -93,6 +94,7 @@
             this.button4.TabIndex = 15;
             this.button4.Text = "Producten";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label4
             // 
@@ -104,54 +106,58 @@
             this.label4.TabIndex = 34;
             this.label4.Text = "Lijst verkopers";
             // 
-            // dataGridView1
+            // VerkoperList
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(325, 322);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(856, 292);
-            this.dataGridView1.TabIndex = 33;
+            this.VerkoperList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.VerkoperList.Location = new System.Drawing.Point(325, 322);
+            this.VerkoperList.Name = "VerkoperList";
+            this.VerkoperList.RowHeadersWidth = 62;
+            this.VerkoperList.RowTemplate.Height = 33;
+            this.VerkoperList.Size = new System.Drawing.Size(856, 292);
+            this.VerkoperList.TabIndex = 33;
+            this.VerkoperList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.VerkoperList_CellContentClick);
             // 
-            // button2
+            // Verwijderen_Verkoper_btn
             // 
-            this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button2.Location = new System.Drawing.Point(782, 174);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(167, 34);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "Verwijderen";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Verwijderen_Verkoper_btn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Verwijderen_Verkoper_btn.FlatAppearance.BorderSize = 0;
+            this.Verwijderen_Verkoper_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Verwijderen_Verkoper_btn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Verwijderen_Verkoper_btn.Location = new System.Drawing.Point(782, 174);
+            this.Verwijderen_Verkoper_btn.Name = "Verwijderen_Verkoper_btn";
+            this.Verwijderen_Verkoper_btn.Size = new System.Drawing.Size(167, 34);
+            this.Verwijderen_Verkoper_btn.TabIndex = 32;
+            this.Verwijderen_Verkoper_btn.Text = "Verwijderen";
+            this.Verwijderen_Verkoper_btn.UseVisualStyleBackColor = false;
+            this.Verwijderen_Verkoper_btn.Click += new System.EventHandler(this.Verwijderen_Verkoper_btn_Click);
             // 
-            // button1
+            // Bewerken_Verkoper_btn
             // 
-            this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.button1.Location = new System.Drawing.Point(412, 174);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 34);
-            this.button1.TabIndex = 31;
-            this.button1.Text = "Bewerken";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Bewerken_Verkoper_btn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Bewerken_Verkoper_btn.FlatAppearance.BorderSize = 0;
+            this.Bewerken_Verkoper_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bewerken_Verkoper_btn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Bewerken_Verkoper_btn.Location = new System.Drawing.Point(412, 174);
+            this.Bewerken_Verkoper_btn.Name = "Bewerken_Verkoper_btn";
+            this.Bewerken_Verkoper_btn.Size = new System.Drawing.Size(167, 34);
+            this.Bewerken_Verkoper_btn.TabIndex = 31;
+            this.Bewerken_Verkoper_btn.Text = "Bewerken";
+            this.Bewerken_Verkoper_btn.UseVisualStyleBackColor = false;
+            this.Bewerken_Verkoper_btn.Click += new System.EventHandler(this.Bewerken_Verkoper_btn_Click);
             // 
-            // inlog_btn
+            // Bewaren_Verkoper_btn
             // 
-            this.inlog_btn.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.inlog_btn.FlatAppearance.BorderSize = 0;
-            this.inlog_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.inlog_btn.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.inlog_btn.Location = new System.Drawing.Point(599, 174);
-            this.inlog_btn.Name = "inlog_btn";
-            this.inlog_btn.Size = new System.Drawing.Size(167, 34);
-            this.inlog_btn.TabIndex = 30;
-            this.inlog_btn.Text = "Bewaren";
-            this.inlog_btn.UseVisualStyleBackColor = false;
+            this.Bewaren_Verkoper_btn.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.Bewaren_Verkoper_btn.FlatAppearance.BorderSize = 0;
+            this.Bewaren_Verkoper_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bewaren_Verkoper_btn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.Bewaren_Verkoper_btn.Location = new System.Drawing.Point(599, 174);
+            this.Bewaren_Verkoper_btn.Name = "Bewaren_Verkoper_btn";
+            this.Bewaren_Verkoper_btn.Size = new System.Drawing.Size(167, 34);
+            this.Bewaren_Verkoper_btn.TabIndex = 30;
+            this.Bewaren_Verkoper_btn.Text = "Bewaren";
+            this.Bewaren_Verkoper_btn.UseVisualStyleBackColor = false;
+            this.Bewaren_Verkoper_btn.Click += new System.EventHandler(this.Bewaren_Verkoper_btn_Click);
             // 
             // label3
             // 
@@ -190,12 +196,12 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "UserName";
             // 
-            // textBox2
+            // Pseudo_tb
             // 
-            this.textBox2.Location = new System.Drawing.Point(569, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(112, 31);
-            this.textBox2.TabIndex = 24;
+            this.Pseudo_tb.Location = new System.Drawing.Point(569, 109);
+            this.Pseudo_tb.Name = "Pseudo_tb";
+            this.Pseudo_tb.Size = new System.Drawing.Size(112, 31);
+            this.Pseudo_tb.TabIndex = 24;
             // 
             // UserName
             // 
@@ -253,7 +259,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.button7);
+            this.panel1.Controls.Add(this.uitloggenbtn);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
@@ -261,13 +267,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 642);
             this.panel1.TabIndex = 20;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(718, 109);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(112, 31);
-            this.textBox4.TabIndex = 37;
             // 
             // pictureBox1
             // 
@@ -279,22 +278,29 @@
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
             // 
+            // WachtWoordtb
+            // 
+            this.WachtWoordtb.Location = new System.Drawing.Point(718, 109);
+            this.WachtWoordtb.Name = "WachtWoordtb";
+            this.WachtWoordtb.Size = new System.Drawing.Size(112, 31);
+            this.WachtWoordtb.TabIndex = 37;
+            // 
             // Verkoper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1206, 642);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.WachtWoordtb);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.inlog_btn);
+            this.Controls.Add(this.VerkoperList);
+            this.Controls.Add(this.Verwijderen_Verkoper_btn);
+            this.Controls.Add(this.Bewerken_Verkoper_btn);
+            this.Controls.Add(this.Bewaren_Verkoper_btn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Pseudo_tb);
             this.Controls.Add(this.UserName);
             this.Controls.Add(this.naamTB);
             this.Controls.Add(this.panel2);
@@ -303,7 +309,7 @@
             this.Name = "Verkoper";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verkoper";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerkoperList)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -315,26 +321,26 @@
 
         #endregion
 
-        private Button button7;
+        private Button uitloggenbtn;
         private Button button5;
         private Button button4;
         private Label label4;
-        private DataGridView dataGridView1;
-        private Button button2;
-        private Button button1;
-        private Button inlog_btn;
+        private DataGridView VerkoperList;
+        private Button Verwijderen_Verkoper_btn;
+        private Button Bewerken_Verkoper_btn;
+        private Button Bewaren_Verkoper_btn;
         private Label label3;
         private TextBox textBox3;
         private Label label2;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox Pseudo_tb;
         private Label UserName;
         private TextBox naamTB;
         private TextBox textBox1;
         private Panel panel2;
         private Button button6;
         private Panel panel1;
-        private TextBox textBox4;
+        private TextBox WachtWoordtb;
         private PictureBox pictureBox1;
     }
 }
